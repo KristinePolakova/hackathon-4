@@ -12,7 +12,6 @@ function Content() {
         <Header />
         <div className="ps-0 ps-md-5 flex-grow-1">
         <Routes>
-          <Route path="/" element={<Login />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/products" element={<Products />} />
           <Route path="/orders" element={<Orders />} />
