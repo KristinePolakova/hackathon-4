@@ -17,7 +17,7 @@ function Login(props) {
                         <div className="login">
                             <input type="email" id="email" placeholder="Email address"></input>
                             <br/>
-                            <input type="password" id="password" placeholder="Password" required minlength="8"></input>
+                            <input type="password" id="password" placeholder="Password" required minLength="8"></input>
                         </div>
                     </div>
                     <div>
