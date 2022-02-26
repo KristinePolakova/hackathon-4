@@ -1,12 +1,20 @@
+import CategoriesTable from "../Components/CategoriesTable"
+
 function Categories() {
-    return (
+  return (
+    <div>
         <div>
-HEllo!!!
-
-
-jigodjfspf'jgiafd'jbfapij'paigipjhgpjeaghjdfgpo'hfsggfopfahdmhapjhf
+            
         </div>
-    )
+        <div>
+
+        </div>
+        <div>
+        <CategoriesTable />
+        </div>
+      
+    </div>
+  )
 }
 
-export default Categories;
+export default Categories
