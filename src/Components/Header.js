@@ -22,7 +22,7 @@ function Header() {
           <div className="collapse navbar-collapse w-100 mt-3" id="navbarSupportedContent">
             <ul className="navbar-nav w-100 flex-md-column text-center text-md-end">
               <li className="nav-item active">
-              <Link className="nav-link border rounded text-center" to="/categories">Categories</Link>
+              <Link className="nav-link border rounded text-center" to="/">Categories</Link>
               </li>
               <li className="nav-item">
               <Link className="nav-link border rounded text-center" to="/products">Products</Link>
