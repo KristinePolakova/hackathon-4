@@ -1,8 +1,8 @@
 import { useState } from "react"
-import '../Components/Orders.css'
+import '../Components/Order.css'
 
 
-function Orders() {
+function Order() {
 
     const vat = 21;
     const initialData =
@@ -132,4 +132,4 @@ function Orders() {
 }
 
 
-export default Orders
+export default Order
