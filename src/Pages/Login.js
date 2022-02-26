@@ -9,7 +9,7 @@ function Login(props) {
     }
 
     return (
-        <div>
+        <div className='top-login'>
             <form onSubmit={()=>form_submit_login()}>
                 <div className="container separateLoginTable">
                     <img className="imgLogo" src="images/logo.png"></img>

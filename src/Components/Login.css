@@ -44,3 +44,8 @@ input[placeholder] {
     margin: 20px;
     border-radius: 5px;
 }
+
+.top-login {
+    margin-top: 200px;
+    margin-bottom: 500px;
+}
