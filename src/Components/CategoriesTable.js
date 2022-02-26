@@ -3,39 +3,35 @@ import CategoriesRow from "./CategoriesRow"
 import getCategories from "./Data/getCategories"
 function CategoriesTable() {
   const [items, setItems] = useState(getCategories())
-  const [filterList, setFilterList] = useState("")
-
-  // const listItems = carList.map((car) => <li key={car.toString()}>{car}</li>);
+  const [searchTerm, setSearchTerm] = useState("")
 
   const deleteItem = (itemIndex) => {
     items.splice(itemIndex, 1)
     setItems([...items])
   }
-  const tableItems = items.map((item, id, title, description, index) => {
-    return (
-      <CategoriesRow
-        key={id}
-        item={item}
-        id={id}
-        title={title}
-        description={description}
-        deleteItem={deleteItem}
-        index={index}
-      />
-    )
-  })
-  
-  const findName = (event) => {
-    if (event.target.value === "") {
-      setFilterList(tableItems)
-      return
-    }
-    const filteredValues = tableItems.filter(
-      (item) =>
-        item.toLowerCase().indexOf(event.target.value.toLowerCase()) !== -1
-    )
-    setFilterList(filteredValues)
-  }
+  const tableItems = items.filter((val)=> {
+      if (searchTerm === "") {
+        return val
+      } else if (
+        val.title.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
+      ) {
+        return val
+      }
+    })
+    .map((item, id, title, description, index) => {
+      return (
+        <CategoriesRow
+          key={id}
+          item={item}
+          id={id}
+          title={title}
+          description={description}
+          deleteItem={deleteItem}
+          index={index}
+        />
+      )
+    })
+
   return (
     <div>
       <div>
@@ -51,8 +47,12 @@ function CategoriesTable() {
       <div className="row">
         <div className="col-md-12 d-flex justify-content-end">
           <span className="p-2 mx-2">Search</span>
-          <input type="text" onChange={findName}></input>
-          {filterList && filterList.map((item) => <div>{item}</div>)}
+          <input
+            type="text"
+            onChange={(event) => {
+              setSearchTerm(event.target.value)
+            }}
+          ></input>
         </div>
       </div>
       <div>
