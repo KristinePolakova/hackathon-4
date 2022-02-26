@@ -1,17 +1,18 @@
 import '../Components/Login.css'
 
 
-function Login() {
+function Login(props) {
 
+    function form_submit_login()
+    {
+        props.setLogin(true);
+    }
 
     return (
         <div>
-            <form onsubmit="form_submit_login();return false;">
+            <form onSubmit={()=>form_submit_login()}>
                 <div className="container separateLoginTable">
                     <img className="imgLogo" src="images/logo.png"></img>
-                    <div className="title signIn">
-                        <h4>LOGO</h4>
-                    </div>
                     <div className="textfields">
                         <div className="login">
                             <input type="email" id="email" placeholder="Email address"></input>
@@ -20,8 +21,7 @@ function Login() {
                         </div>
                     </div>
                     <div>
-                        {/* <input type="submit" value="Log In"></input> */}
-                        <button className="btn btn-dark btn-submit">Log In</button>
+                        <button  className="btn btn-dark btn-submit">Log In</button>
                     </div>
                 </div>
             </form>
