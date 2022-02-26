@@ -1,0 +1,12 @@
+.borderStyle {
+    border: 1px solid;
+    margin: 10px;
+}
+
+.rowStyle {
+    padding: 10px;
+    white-space: nowrap;
+}
+.tableStyle{
+    width: 100%;
+}
