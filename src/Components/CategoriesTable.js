@@ -9,7 +9,7 @@ function CategoriesTable() {
     items.splice(itemIndex, 1)
     setItems([...items])
   }
-  const tableItems = items.filter((val)=> {
+  const tableItems = items.filter((val) => {
       if (searchTerm === "") {
         return val
       } else if (
@@ -17,8 +17,7 @@ function CategoriesTable() {
       ) {
         return val
       }
-    })
-    .map((item, id, title, description, index) => {
+    }).map((item, id, title, description, index) => {
       return (
         <CategoriesRow
           key={id}
