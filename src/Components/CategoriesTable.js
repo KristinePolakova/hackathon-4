@@ -13,10 +13,10 @@ function CategoriesTable() {
       if (searchTerm === "") {
         return val
       } else if (
-        val.title.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
+        val.title.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()) || val.description.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()) 
       ) {
         return val
-      }
+      } 
     }).map((item, id, title, description, index) => {
       return (
         <CategoriesRow
