@@ -1,6 +1,6 @@
 import CategoriesTable from "../Components/CategoriesTable"
 
-function Categories(props) {
+function Categories() {
   
   return (
     <div>

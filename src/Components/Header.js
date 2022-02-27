@@ -5,7 +5,7 @@ function Header() {
     <div>
       <nav className="container d-flex flew-column flex-md-row mt-4">
         <div className="navbar navbar-expand-md navbar-light d-flex flex-md-column">
-          <Link className="navbar-brand" to="/categories">
+          <Link className="navbar-brand" to="/">
           <img src="/images/logo.png" width="280" height="112" className="d-inline-block align-top" alt="logo"/>
           </Link>
           <button
@@ -35,7 +35,7 @@ function Header() {
         </div>
       </nav>
     </div>
-  );
+  )
 }
 
-export default Header;
+export default Header
