@@ -74,7 +74,6 @@ function Categories() {
         </div>
         <div>{filterList}</div>
       </div>
-      <table className="table border my-3">{}</table>
       <div>
         <CategoriesTable />
       </div>
