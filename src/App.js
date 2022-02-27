@@ -1,6 +1,4 @@
-
 import Content from "./Components/Content"
-
 import Login from "./Pages/Login"
 import { useState } from "react"
 import Footer from "./Components/Footer"
