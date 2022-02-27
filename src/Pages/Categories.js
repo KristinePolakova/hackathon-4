@@ -1,31 +1,28 @@
 import CategoriesTable from "../Components/CategoriesTable"
 import { useState } from "react"
 import getCategories from "../Components/Data/getCategories"
-import CategoriesRow from "../Components/CategoriesRow"
 
 function Categories() {
   const [items] = useState(getCategories())
   const [searchTerm, setSearchTerm] = useState("")
 
-  const filterItems = items
-    .filter((item) => {
+  const filterList = items
+    .filter((val) => {
       if (searchTerm === "") {
         return false
       } else if (
-        item.title
-          .toLocaleLowerCase()
-          .includes(searchTerm.toLocaleLowerCase()) ||
-        item.description
+        val.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        val.description
           .toLocaleLowerCase()
           .includes(searchTerm.toLocaleLowerCase())
       ) {
-        return true
+        return val
       }
       return false
     })
-    .map((item, id, title, description, index) => {
+    .map((val, key) => {
       return (
-        <>
+        <table key={key} className="table border my-3" style={{color: "green"}}>
           <thead>
             <tr>
               <th scope="col">ID</th>
@@ -35,17 +32,20 @@ function Categories() {
               <th scope="col"></th>
             </tr>
           </thead>
-          <tbody style={{ color: "green" }}>
-            <CategoriesRow
-            key={title}
-              item={item}
-              id={id}
-              title={title}
-              description={description}
-              index={index}
-            />
+          <tbody>
+            <tr>
+              <th scope="row">{val.id}</th>
+              <td>{val.title}</td>
+              <td>{val.description}</td>
+              <td>
+                <button className="btn btn-outline-dark">Edit</button>
+              </td>
+              <td>
+                <button className="btn btn-outline-dark">Delete</button>
+              </td>
+            </tr>
           </tbody>
-        </>
+        </table>
       )
     })
 
@@ -72,8 +72,9 @@ function Categories() {
             }}
           ></input>
         </div>
+        <div>{filterList}</div>
       </div>
-      <table className="table border my-3">{filterItems}</table>
+      <table className="table border my-3">{}</table>
       <div>
         <CategoriesTable />
       </div>

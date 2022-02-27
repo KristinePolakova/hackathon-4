@@ -23,14 +23,12 @@ function getCategories() {
       title: "Bedding",
       description:
         "New bed linen is an important part of your interior decoration, and not only for the look – texture and quality is just as important. Our bedding comes in a multitude of patterns and colours, woven from cool, crisp cotton, sturdy linen and other high-quality materials.",
-        key: 4,
     },
     {
       id: 5,
       title: "Decorations",
       description:
         "Add the finishing touch and spread some warm light with our decorations. Fragrant candles, elegant glassware and stylish storage – it’s all in the details.",
-        key: 5,
     },
     {
       id: 6,
