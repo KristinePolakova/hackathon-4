@@ -6,7 +6,6 @@ function ProductLine(props) {
   return (
     <tr>
       <th scope="row"><img src={item.image} className="img-thumbnail" style={{ width: 100 }} alt="..." /></th>
-
       <td className="align-middle text-justify">{item.id}</td>
       <td className="align-middle text-justify">{item.title}</td>
       <td className="align-middle text-justify">{item.description}</td>
@@ -21,4 +20,5 @@ function ProductLine(props) {
     </tr>
   )
 }
+
 export default ProductLine
