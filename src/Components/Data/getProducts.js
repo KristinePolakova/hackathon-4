@@ -34,7 +34,35 @@ function getProducts() {
             title: 'Table mat - Jute 100%',
             description: 'Round, hole-patterned table mat in braided jute',
             price: 3.00,
-        }
+        },
+        {
+            id: 4,
+            image: 'https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F16%2F97%2F16978818851fc8999babf0001c1f4aa0c2a3f841.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/fullscreen]',
+            title: 'Candlestick - Aluminium 100%',
+            description: 'Tall metal candlestick. Diameter approx. 2 cm. Height 33 cm',
+            price: 15.00,
+        },
+        {
+            id: 4,
+            image: 'https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F16%2F97%2F16978818851fc8999babf0001c1f4aa0c2a3f841.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/fullscreen]',
+            title: 'Candlestick - Aluminium 100%',
+            description: 'Tall metal candlestick. Diameter approx. 2 cm. Height 33 cm',
+            price: 15.00,
+        },
+        {
+            id: 4,
+            image: 'https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F16%2F97%2F16978818851fc8999babf0001c1f4aa0c2a3f841.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/fullscreen]',
+            title: 'Candlestick - Aluminium 100%',
+            description: 'Tall metal candlestick. Diameter approx. 2 cm. Height 33 cm',
+            price: 15.00,
+        },
+        {
+            id: 4,
+            image: 'https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F16%2F97%2F16978818851fc8999babf0001c1f4aa0c2a3f841.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/fullscreen]',
+            title: 'Candlestick - Aluminium 100%',
+            description: 'Tall metal candlestick. Diameter approx. 2 cm. Height 33 cm',
+            price: 15.00,
+        },
     ]
 }
 

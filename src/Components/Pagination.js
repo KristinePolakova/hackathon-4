@@ -14,11 +14,12 @@ function Pagination() {
     }
     const moveRight = () => {
         let nextSelected = startList + 5
-        if (nextSelected > 15) {
-            nextSelected = 15
+        if (nextSelected > 20) {
+            nextSelected = 20
         }
         setStartList(nextSelected)
     }
+
     const changePageOne = () => {
         setStartList(0)
     }
@@ -34,7 +35,6 @@ function Pagination() {
     const changePageFive = () => {
         setStartList(20)
     }
-
     return (
         <div>
             <div className="row">

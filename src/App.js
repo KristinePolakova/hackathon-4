@@ -8,7 +8,8 @@ function App() {
 
   return (
     <div>
-          {isLogin && <Content /> || <Login setLogin={(status)=>setLogin(status)}/>}
+      <Content />
+          {/* {isLogin && <Content /> || <Login setLogin={(status)=>setLogin(status)}/>} */}
       <Footer />
     </div>
   )
