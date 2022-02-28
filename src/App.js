@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Content />
-          {/* {isLogin && <Content /> || <Login setLogin={(status)=>setLogin(status)}/>} */}
+          {isLogin && <Content /> || <Login setLogin={(status)=>setLogin(status)}/>}
       <Footer />
     </div>
   )
