@@ -9,10 +9,29 @@ function Orders() {
     const initialData = getOrders();
 
     const [data, setData] = useState(initialData)
+    const [searchResults, setSearchResults] = useState(initialData);
+    const [searchCriteria, setSearchCriteria] = useState('');
+
 
     function onDelete(order) {
         let filter = data.filter(index => index.id != order.id);
         setData(filter);
+        runSearch(searchCriteria);
+    }
+
+    function runSearch(value) {
+       
+       value = value.toLowerCase();
+
+       if (value=='')
+       {
+            setSearchResults(data);
+       }
+       else
+       {
+            setSearchResults(data.filter(element=>element.name.toLowerCase().includes(value) || element.street.toLowerCase().includes(value) ));
+       }
+       setSearchCriteria(value);
     }
 
     function drawStatusBox(row) {
@@ -27,6 +46,12 @@ function Orders() {
 
     return (
         <div>
+            <div className="row row my-3">
+                <div className="col-md-6">
+                    <span className="text-muted top-style">Orders</span>
+                </div>
+            </div>
+            <Search runSearch={runSearch} />
             <table className="borderStyle tableStyle">
                 <thead>
                     <tr>
@@ -41,7 +66,7 @@ function Orders() {
                 </thead>
                 <tbody className="borderStyle">
                     {
-                        data.map((row) => (
+                        searchResults.map((row) => (
                             <tr className="borderStyle" key={row.id}>
                                 <td className="rowStyle">{row.id}</td>
                                 <td className="rowStyle"><strong>{row.name}</strong><br />
