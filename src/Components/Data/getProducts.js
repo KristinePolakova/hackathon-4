@@ -11,7 +11,7 @@ function getProducts() {
             id: 2,
             image : 'https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F40%2F90%2F4090fd80f89bb4288f99cf7dbeb497b05d0f96b6.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bhome_kitchen_ware%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B3%5D&call=url[file:/product/main]',
             title: '3 pieces - fork, knife, spoon',
-            description: 'Knife, fork and spoon in stainless steel. Length 20-22.5 cm',
+            description: 'Knife, fork and spoon in stainless steel',
             price: 22.00,
         },
         {
@@ -25,7 +25,7 @@ function getProducts() {
             id: 4,
             image: 'https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F16%2F97%2F16978818851fc8999babf0001c1f4aa0c2a3f841.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/fullscreen]',
             title: 'Candlestick',
-            description: 'Tall metal candlestick. Diameter approx. 2 cm. Height 33 cm',
+            description: 'Tall metal candlestick',
             price: 15.00,
         },
         {
@@ -46,7 +46,7 @@ function getProducts() {
             id: 7,
             image: 'https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F58%2Fd8%2F58d897df9f09d65cf11613873ba1345a5dc68a99.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bhome_bedlinen_duvetscoversets_single%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]',
             title: 'Cotton Percale Twin Duvet Cover Set',
-            description: 'Twin duvet cover set in densely-woven cotton percale with embroidery. Duvet cover fastens at foot end with buttons. One pillowcase with envelope opening. Thread count 300',
+            description: 'Twin duvet cover set in densely-woven cotton percale with embroidery. Duvet cover fastens at foot end with buttons',
             price: 75.00,
         },
         {
@@ -153,7 +153,7 @@ function getProducts() {
             id: 22,
             image: 'https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F28%2Fd9%2F28d984781e8b4a47f8adf5ce8ef045c7efd0dc3d.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BDESCRIPTIVEDETAIL%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]',
             title: 'Large Rattan-framed Mirror',
-            description: 'Large, round mirror with a handmade rattan frame. Loop at back for hanging. Screws not included. Diameter of mirror 9 3/4 in. Diameter of frame 18 3/4 in',
+            description: 'Large, round mirror with a handmade rattan frame. Loop at back for hanging',
             price: 50.00,
         },
         {
