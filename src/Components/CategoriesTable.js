@@ -1,26 +1,32 @@
 import { useState } from "react"
-import CategoriesRow from "./CategoriesRow"
 import getCategories from "./Data/getCategories"
 
 function CategoriesTable() {
   const [items, setItems] = useState(getCategories())
 
-  const deleteItem = (itemIndex) => {
-    items.splice(itemIndex, 1)
+  const deleteItem = (categoriesTableIndex) => {
+    items.splice(categoriesTableIndex, 1)
     setItems([...items])
   }
 
-  const tableItems = items.map((item, id, title, description, index) => {
+  const tableItems = items.map((item, id) => {
     return (
-      <CategoriesRow
-        key={id}
-        item={item}
-        id={id}
-        title={title}
-        description={description}
-        deleteItem={deleteItem}
-        index={index}
-      />
+      <tr key={item.title}>
+        <th scope="row">{item.id}</th>
+        <td>{item.title}</td>
+        <td>{item.description}</td>
+        <td>
+          <button className="btn btn-outline-dark">Edit</button>
+        </td>
+        <td>
+          <button
+            className="btn btn-outline-dark"
+            onClick={() => deleteItem(id)}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
     )
   })
 

@@ -3,7 +3,6 @@ function CategoriesRow(props) {
 
   return (
     <>
-      <tr>
         <th scope="row">{item.id}</th>
         <td>{item.title}</td>
         <td>{item.description}</td>
@@ -13,7 +12,6 @@ function CategoriesRow(props) {
         <td>
           <button className="btn btn-outline-dark" onClick={() => deleteItem(index)}>Delete</button>
         </td>
-      </tr>
     </>
   )
 }
