@@ -5,7 +5,7 @@ function Header() {
     <div>
       <nav className="container d-flex flew-column flex-md-row mt-4">
         <div className="navbar navbar-expand-md navbar-light d-flex flex-md-column">
-          <Link className="navbar-brand" to="/categories">
+          <Link className="navbar-brand" to="/">
           <img src="/images/logo.png" width="280" height="112" className="d-inline-block align-top" alt="logo"/>
           </Link>
           <button
@@ -22,7 +22,7 @@ function Header() {
           <div className="collapse navbar-collapse w-100 mt-3" id="navbarSupportedContent">
             <ul className="navbar-nav w-100 flex-md-column text-center text-md-end">
               <li className="nav-item active">
-              <Link className="nav-link border rounded text-center" to="/categories">Categories</Link>
+              <Link className="nav-link border rounded text-center" to="/">Categories</Link>
               </li>
               <li className="nav-item">
               <Link className="nav-link border rounded text-center" to="/products">Products</Link>
@@ -35,7 +35,7 @@ function Header() {
         </div>
       </nav>
     </div>
-  );
+  )
 }
 
-export default Header;
+export default Header
