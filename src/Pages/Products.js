@@ -14,7 +14,9 @@ function Products() {
                     </div>
                 </div>
             </div>
+            <div style={{ marginBottom: '40px' }}>
                 <ProductsSearch />
+            </div>
             <div>
                 <ProductList />
             </div>
