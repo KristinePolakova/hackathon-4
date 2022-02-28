@@ -10,7 +10,7 @@ function ProductLine(props) {
       <td className="align-middle text-justify">{item.title}</td>
       <td className="align-middle text-justify">{item.description}</td>
       <td className="align-middle text-center">{item.price}eur</td>
-      <td className="align-middle text-center">{itemDiscount}eur</td>
+      <td className="align-middle text-center">{itemDiscount.toFixed(2)}eur</td>
       <td className="align-middle text-center">
         <div className="d-flex">
           <button type="button" className="btn btn-outline-dark" style={{ margin: '5px' }}>Edit</button>

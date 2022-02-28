@@ -63,13 +63,13 @@ function ProductList() {
     return (
         <div>
             <div className="container">
-                <table className="table  table-striped">
+                <table className="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col" className="align-middle text-center">Image</th>
                             <th scope="col" className="align-middle text-center">ID</th>
-                            <th scope="col" className="align-middle text-center">Title</th>
-                            <th scope="col" className="align-middle text-center">Description</th>
+                            <th scope="col" className="align-middle text-left">Title</th>
+                            <th scope="col" className="align-middle text-left">Description</th>
                             <th scope="col" className="align-middle text-center">Price</th>
                             <th scope="col" className="align-middle text-center">Discount price</th>
                             <th scope="col"></th>
