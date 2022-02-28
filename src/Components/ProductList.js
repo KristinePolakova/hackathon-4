@@ -21,11 +21,12 @@ function ProductList() {
     }
     const moveRight = () => {
         let nextSelected = startList + 5
-        if (nextSelected > 15) {
-            nextSelected = 15
+        if (nextSelected > 20) {
+            nextSelected = 20
         }
         setStartList(nextSelected)
     }
+
     const changePageOne = () => {
         setStartList(0)
     }
@@ -41,7 +42,6 @@ function ProductList() {
     const changePageFive = () => {
         setStartList(20)
     }
-
     const itemsList = items.slice(startList, endList).map((item, image, id, title, description, price, itemDiscount, index) => {
 
         return (
@@ -62,21 +62,23 @@ function ProductList() {
 
     return (
         <div>
-            <div>
-                <table className="table border my-3">
+            <div className="container">
+                <table className="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col" className="align-middle text-center">Image</th>
                             <th scope="col" className="align-middle text-center">ID</th>
-                            <th scope="col" className="align-middle text-center">Title</th>
-                            <th scope="col" className="align-middle text-center">Description</th>
+                            <th scope="col" className="align-middle text-left">Title</th>
+                            <th scope="col" className="align-middle text-left">Description</th>
                             <th scope="col" className="align-middle text-center">Price</th>
                             <th scope="col" className="align-middle text-center">Discount price</th>
                             <th scope="col"></th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
-                    <tbody>{itemsList}</tbody>
+                    <tbody>
+                        {itemsList}
+                    </tbody>
                 </table>
                 <div className="row">
                     <div className="col">
