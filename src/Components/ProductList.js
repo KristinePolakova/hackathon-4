@@ -1,16 +1,17 @@
 import { useState } from "react"
-import ProductLine from "./ProductLine"
 import getProducts from "./Data/getProducts"
 
 function ProductList() {
     const [items, setItems] = useState(getProducts())
 
-    const deleteItem = (itemIndex) => {
-        items.splice(itemIndex, 1)
+    const deleteItem = (productListIndex) => {
+        items.splice(productListIndex, 1)
         setItems([...items])
     }
     const [startList, setStartList] = useState(0)
+
     const endList = startList + 5
+
 
     const moveLeft = () => {
         let nextSelected = startList - 5
@@ -26,7 +27,6 @@ function ProductList() {
         }
         setStartList(nextSelected)
     }
-
     const changePageOne = () => {
         setStartList(0)
     }
@@ -42,28 +42,31 @@ function ProductList() {
     const changePageFive = () => {
         setStartList(20)
     }
-    const itemsList = items.slice(startList, endList).map((item, image, id, title, description, price, itemDiscount, index) => {
+    const listItems = items.slice(startList, endList).map((item, id) => {
+        let itemDiscount = item.price - (item.price * .5)
 
         return (
-            <ProductLine
-                key={image}
-                item={item}
-                src={image}
-                id={id}
-                title={title}
-                description={description}
-                price={price}
-                itemDiscount={itemDiscount}
-                deleteItem={deleteItem}
-                index={index}
-            />
+            <tr key={item.title}>
+                <th scope="row"><img src={item.image} className="img-thumbnail" style={{ width: 100 }} alt="..." /></th>
+                <td className="align-middle text-justify">{item.id}</td>
+                <td className="align-middle text-justify">{item.title}</td>
+                <td className="align-middle text-justify">{item.description}</td>
+                <td className="align-middle text-center">{item.price}eur</td>
+                <td className="align-middle text-center">{itemDiscount.toFixed(2)}eur</td>
+                <td className="align-middle text-center">
+                    <div className="d-flex">
+                        <button type="button" className="btn btn-outline-dark" style={{ margin: '5px' }}>Edit</button>
+                        <button className="btn btn-outline-dark" style={{ margin: '5px' }} onClick={() => deleteItem(id)}>Delete</button>
+                    </div>
+                </td>
+            </tr>
         )
     })
 
     return (
         <div>
-            <div className="container">
-                <table className="table table-striped">
+            <div>
+                <table className="table border my-3 table-striped">
                     <thead>
                         <tr>
                             <th scope="col" className="align-middle text-center">Image</th>
@@ -72,27 +75,21 @@ function ProductList() {
                             <th scope="col" className="align-middle text-left">Description</th>
                             <th scope="col" className="align-middle text-center">Price</th>
                             <th scope="col" className="align-middle text-center">Discount price</th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        {itemsList}
+                        {listItems}
                     </tbody>
                 </table>
-                <div className="row">
-                    <div className="col">
-                        <div className="btn-group float-end" role="group" aria-label="Basic outlined example">
-                            <button onClick={() => moveLeft(startList)} type="button" className="btn btn-outline-secondary">‹</button>
-                            <button onClick={() => changePageOne(startList)} type="button" className="btn btn-outline-secondary">1</button>
-                            <button onClick={() => changePageTwo(startList)} type="button" className="btn btn-outline-secondary">2</button>
-                            <button onClick={() => changePageThree(startList)} type="button" className="btn btn-outline-secondary">3</button>
-                            <button onClick={() => changePageFour(startList)} type="button" className="btn btn-outline-secondary">4</button>
-                            <button onClick={() => changePageFive(startList)} type="button" className="btn btn-outline-secondary">5</button>
-                            <button onClick={() => moveRight(startList)} type="button" className="btn btn-outline-secondary">›</button>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div className="btn-group float-end" role="group" aria-label="Basic outlined example">
+                <button onClick={() => moveLeft(startList)} type="button" className="btn btn-outline-secondary">‹</button>
+                <button onClick={() => changePageOne(startList)} type="button" className="btn btn-outline-secondary">1</button>
+                <button onClick={() => changePageTwo(startList)} type="button" className="btn btn-outline-secondary">2</button>
+                <button onClick={() => changePageThree(startList)} type="button" className="btn btn-outline-secondary">3</button>
+                <button onClick={() => changePageFour(startList)} type="button" className="btn btn-outline-secondary">4</button>
+                <button onClick={() => changePageFive(startList)} type="button" className="btn btn-outline-secondary">5</button>
+                <button onClick={() => moveRight(startList)} type="button" className="btn btn-outline-secondary">›</button>
             </div>
         </div>
     )

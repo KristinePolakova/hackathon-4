@@ -1,5 +1,6 @@
-import ProductList from "../Components/ProductList"
 import ProductsSearch from "../Components/ProductsSearch"
+import ProductList from "../Components/ProductList"
+
 
 function Products() {
     return (
@@ -14,7 +15,9 @@ function Products() {
                     </div>
                 </div>
             </div>
+            <div style={{ marginBottom: '40px' }}>
                 <ProductsSearch />
+            </div>
             <div>
                 <ProductList />
             </div>
