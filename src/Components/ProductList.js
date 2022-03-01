@@ -9,9 +9,9 @@ function ProductList() {
         setItems([...items])
     }
     const [startList, setStartList] = useState(0)
-    
+
     const endList = startList + 5
-    
+
 
     const moveLeft = () => {
         let nextSelected = startList - 5
@@ -46,7 +46,7 @@ function ProductList() {
         let itemDiscount = item.price - (item.price * .5)
 
         return (
-            <tr>
+            <tr key={item.title}>
                 <th scope="row"><img src={item.image} className="img-thumbnail" style={{ width: 100 }} alt="..." /></th>
                 <td className="align-middle text-justify">{item.id}</td>
                 <td className="align-middle text-justify">{item.title}</td>
@@ -65,39 +65,33 @@ function ProductList() {
 
     return (
         <div>
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <table className="table border table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col" className="align-middle text-center">Image</th>
-                                    <th scope="col" className="align-middle text-center">ID</th>
-                                    <th scope="col" className="align-middle text-left">Title</th>
-                                    <th scope="col" className="align-middle text-left">Description</th>
-                                    <th scope="col" className="align-middle text-center">Price</th>
-                                    <th scope="col" className="align-middle text-center">Discount price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {listItems}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                    <div className="col">
-                        <div className="btn-group float-end" role="group" aria-label="Basic outlined example">
-                        <button onClick={() => moveLeft(startList)} type="button" className="btn btn-outline-secondary">‹</button>
-                        <button onClick={() => changePageOne(startList)} type="button" className="btn btn-outline-secondary">1</button>
-                        <button onClick={() => changePageTwo(startList)} type="button" className="btn btn-outline-secondary">2</button>
-                        <button onClick={() => changePageThree(startList)} type="button" className="btn btn-outline-secondary">3</button>
-                        <button onClick={() => changePageFour(startList)} type="button" className="btn btn-outline-secondary">4</button>
-                        <button onClick={() => changePageFive(startList)} type="button" className="btn btn-outline-secondary">5</button>
-                        <button onClick={() => moveRight(startList)} type="button" className="btn btn-outline-secondary">›</button>
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <table className="table border my-3 table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col" className="align-middle text-center">Image</th>
+                            <th scope="col" className="align-middle text-center">ID</th>
+                            <th scope="col" className="align-middle text-left">Title</th>
+                            <th scope="col" className="align-middle text-left">Description</th>
+                            <th scope="col" className="align-middle text-center">Price</th>
+                            <th scope="col" className="align-middle text-center">Discount price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {listItems}
+                    </tbody>
+                </table>
             </div>
+            <div className="btn-group float-end" role="group" aria-label="Basic outlined example">
+                <button onClick={() => moveLeft(startList)} type="button" className="btn btn-outline-secondary">‹</button>
+                <button onClick={() => changePageOne(startList)} type="button" className="btn btn-outline-secondary">1</button>
+                <button onClick={() => changePageTwo(startList)} type="button" className="btn btn-outline-secondary">2</button>
+                <button onClick={() => changePageThree(startList)} type="button" className="btn btn-outline-secondary">3</button>
+                <button onClick={() => changePageFour(startList)} type="button" className="btn btn-outline-secondary">4</button>
+                <button onClick={() => changePageFive(startList)} type="button" className="btn btn-outline-secondary">5</button>
+                <button onClick={() => moveRight(startList)} type="button" className="btn btn-outline-secondary">›</button>
+            </div>
+        </div>
     )
 }
 
