@@ -1,5 +1,6 @@
-import ProductList from "../Components/ProductList"
 import ProductsSearch from "../Components/ProductsSearch"
+import ProductList from "../Components/ProductList"
+
 
 function Products() {
     return (
