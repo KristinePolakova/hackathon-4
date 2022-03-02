@@ -3,7 +3,7 @@ import CategoriesTable from "../Components/CategoriesTable"
 
 function Categories() {
   return (
-    <div>
+    <div className="pt-3">
       <div>
         <div className="row my-3">
           <div className="col-md-6">
