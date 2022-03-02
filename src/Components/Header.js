@@ -3,7 +3,7 @@ import '../Components/Header.css'
 function Header() {
   return (
     <div>
-      <nav className="container d-flex flew-column flex-md-row mt-4">
+      <nav className="mt-">
         <div className="navbar navbar-expand-md navbar-light d-flex flex-md-column">
           <Link className="navbar-brand" to="/">
           <img src="/images/logo.png" width="280" height="112" className="d-inline-block align-top" alt="logo"/>
